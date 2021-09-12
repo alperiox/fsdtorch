@@ -4,10 +4,12 @@ Simple package for face shape detection.
 Example usage:
 ```py
 from fsdtorch import inference
+import cv2
 image_path = "example.jpg"
 image = cv2.imread(image_path)
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-class_id, class_name, confidence = inference(image_rgb)
+class_id, class_name, confidence = inference.predict_shape(image_rgb)
+print(class_name, confidence)
 ```
 
 I have fine-tuned a pre-trained `InceptionResnetv1` model from [`pytorch-facenet`](https://github.com/timesler/facenet-pytorch) with cropped version of [face shape dataset](https://www.kaggle.com/niten19/face-shape-dataset) from [kaggle](www.kaggle.com).
