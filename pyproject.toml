@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fsdtorch"
-version = "0.1.0"
+version = "0.1.1"
 description = "Face shape detector in pytorch that works with pretrained networks"
 authors = ["Alper <itsc0508@gmail.com>"]
 license = "MIT"
