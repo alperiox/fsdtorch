@@ -12,7 +12,7 @@ class_id, class_name, confidence = inference.predict_shape(image_rgb)
 print(class_name, confidence)
 ```
 
-I have fine-tuned a pre-trained `InceptionResnetv1` model from [`pytorch-facenet`](https://github.com/timesler/facenet-pytorch) with cropped version of [face shape dataset](https://www.kaggle.com/niten19/face-shape-dataset) from [kaggle](www.kaggle.com).
+I have fine-tuned a pre-trained `InceptionResnetv1` model from [`pytorch-facenet`](https://github.com/timesler/facenet-pytorch) with cropped version of [face shape dataset](https://www.kaggle.com/niten19/face-shape-dataset) from [kaggle](https://www.kaggle.com).
 
 Another example script can be found in `examples` for live shape detection.
 
