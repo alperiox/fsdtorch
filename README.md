@@ -1,6 +1,11 @@
 # fsdtorch
 Simple package for face shape detection.
 
+Installation:
+```
+pip install fsdtorch
+```
+
 Example usage:
 ```py
 from fsdtorch import inference
