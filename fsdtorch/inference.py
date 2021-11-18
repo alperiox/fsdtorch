@@ -6,7 +6,8 @@ import onnxruntime
 import os
 import gdown
 
-idx_to_class = {'Empty': 0, 'Heart': 1, 'Oblong': 2, 'Oval': 3, 'Round': 4, 'Square': 5}
+class_to_idx = {'Empty': 0, 'Heart': 1, 'Oblong': 2, 'Oval': 3, 'Round': 4, 'Square': 5}
+idx_to_class = {v:k for k,v in class_to_idx.items()}
 model_name = "20211118-8.0-pretrained_resnetv1.onnx"
 if model_name not in os.listdir(os.getcwd()):
     print("[ERROR] Couldn't find the fine-tuned model!")
