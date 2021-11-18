@@ -9,7 +9,7 @@ import gdown
 idx_to_class = {'Empty': 0, 'Heart': 1, 'Oblong': 2, 'Oval': 3, 'Round': 4, 'Square': 5}
 model_name = "20211118-8.0-pretrained_resnetv1.onnx"
 if model_name not in os.listdir(os.getcwd()):
-    print("[HATA] Pretrained model bulunamadı!")
+    print("[ERROR] Couldn't find the fine-tuned model!")
     print("[] Downloading the model through google drive...")
     
     url = 'https://drive.google.com/uc?id=1nLJu05fwG_uYeNNoKd6hPYm_mKvP4qWP'

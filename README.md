@@ -1,12 +1,15 @@
 # fsdtorch
+
 Simple package for face shape detection.
 
 Installation:
+
 ```
 pip install fsdtorch
 ```
 
 Example usage:
+
 ```py
 from fsdtorch import inference
 import cv2
@@ -21,12 +24,8 @@ I have fine-tuned a pre-trained `InceptionResnetv1` model from [`pytorch-facenet
 
 Another example script can be found in `examples` for live shape detection.
 
-<<<<<<< HEAD
 Inference is made by using exported `onnx` version of the model and `onnxruntime`.
 
 Final training report:
 
 ![training summary](final_training_summary.png)
-=======
-Inference is made by using exported `onnx` version of the model and `onnxruntime`. 
->>>>>>> 5930537cead9a64263034f4b9227b95cd40443e1
