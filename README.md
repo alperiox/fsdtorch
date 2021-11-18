@@ -14,4 +14,8 @@ I have fine-tuned a pre-trained `InceptionResnetv1` model from [`pytorch-facenet
 
 Another example script can be found in `examples` for live shape detection.
 
-Inference is made by using exported `onnx` version of the model and `onnxruntime`. 
+Inference is made by using exported `onnx` version of the model and `onnxruntime`.
+
+Final training report:
+
+![training summary](final_training_summary.png)

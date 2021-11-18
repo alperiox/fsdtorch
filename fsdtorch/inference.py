@@ -6,17 +6,18 @@ import onnxruntime
 import os
 import gdown
 
-idx_to_class = {0: 'Heart', 1: 'Oblong', 2: 'Oval', 3: 'Round', 4: 'Square'}
-model_name = "2021911-8.21-pretrained_resnetv1.onnx"
+idx_to_class = {'Empty': 0, 'Heart': 1, 'Oblong': 2, 'Oval': 3, 'Round': 4, 'Square': 5}
+model_name = "20211118-8.0-pretrained_resnetv1.onnx"
 if model_name not in os.listdir(os.getcwd()):
     print("[HATA] Pretrained model bulunamadı!")
-    print("[] Google drive üzerinden model indiriliyor...")
-    url = 'https://drive.google.com/uc?id=1A2pCRXjpfnZ8yrPbJLHZVHqgi0R7jqzb'
+    print("[] Downloading the model through google drive...")
+    
+    url = 'https://drive.google.com/uc?id=1nLJu05fwG_uYeNNoKd6hPYm_mKvP4qWP'
     output = model_name
     gdown.download(url, output, quiet = False)
-    print("[] Model indirildi.")
+    print("[] DONE!")
 else:
-    print("[] %s bulundu!"%model_name.split('-')[1])
+    print("[] Found %s!"%model_name.split('-')[1])
 
 onnx_model = onnx.load(model_name)
 onnx.checker.check_model(onnx_model)

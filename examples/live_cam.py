@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from fsdtorch.inference import predict_shape
+from fsdtorch import inference
 
 
 cam = cv2.VideoCapture(0)
@@ -9,7 +9,7 @@ while cam.isOpened():
 
     frame = cv2.cvtColor(input_frame, cv2.COLOR_BGR2RGB)
 
-    class_id, class_name, confidence = predict_shape(frame)
+    class_id, class_name, confidence = inference.predict_shape(frame)
 
     print("Predicted class id: {} | class name: {} | confidence: {}".format(class_id, class_name, confidence))
 
