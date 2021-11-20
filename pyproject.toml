@@ -11,6 +11,7 @@ opencv-contrib-python = "^4.5.3"
 onnx = "^1.10.1"
 onnxruntime-gpu = "^1.8.1"
 gdown = "^3.13.0"
+facenet-pytorch = "^2.5.2"
 
 [tool.poetry.dev-dependencies]
 poethepoet = "^0.10.0"
